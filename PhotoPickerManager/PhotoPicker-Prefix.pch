@@ -1,0 +1,24 @@
+//
+//  PhotoPicker-Prefix.pch
+//  PhotoPickerManager
+//
+//  Created by mac on 2017/10/25.
+//  Copyright © 2017年 Joker. All rights reserved.
+//
+
+#ifndef PhotoPicker_Prefix_pch
+#define PhotoPicker_Prefix_pch
+#import <UIKit/UIKit.h>
+#import <pop/POP.h>
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#ifdef __IPHONE_10_0
+#define RGB_Alpha(R,G,B,Alpha)     UIColor colorWithDisplayP3Red:R/255.0f green:G/255.0f blue:B/255.0f alpha:Alpha]
+#endif
+#define RGB_Alpha(R,G,B,Alpha)        [UIColor colorWithRed:R/255.0f green:G/255.0f blue:B/255.0f alpha:Alpha]
+
+#endif /* PhotoPicker_Prefix_pch */
