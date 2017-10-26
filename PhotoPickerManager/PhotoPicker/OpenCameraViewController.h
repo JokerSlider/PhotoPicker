@@ -6,10 +6,10 @@
 //  Copyright © 2017年 Joker. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import <UIKit/UIKit.h>
 typedef void(^sendCameraImageBlock)(UIImage *imageData);
 
-@interface OpenCameraViewController : BaseViewController
+@interface OpenCameraViewController : UIViewController
 @property (nonatomic, copy) sendCameraImageBlock sendCameraImageBlock;
 
 @end

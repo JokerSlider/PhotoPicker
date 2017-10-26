@@ -31,9 +31,16 @@
 		042664371FA0781A0009EF1E /* AGImagePreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0426641D1FA075610009EF1E /* AGImagePreviewController.m */; };
 		042664381FA078230009EF1E /* AGPreviewScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 042664131FA075610009EF1E /* AGPreviewScrollView.m */; };
 		0426644E1FA079600009EF1E /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0426644D1FA079600009EF1E /* AssetsLibrary.framework */; };
-		0426644F1FA084850009EF1E /* libpop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 042664501FA084850009EF1E /* libpop.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		042664521FA088290009EF1E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042664511FA088290009EF1E /* CoreGraphics.framework */; };
 		042664551FA08EAD0009EF1E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042664541FA08EAC0009EF1E /* QuartzCore.framework */; };
+		04F72E411FA168D000FE4748 /* libpop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F72E421FA168D000FE4748 /* libpop.a */; };
+		04F72E451FA17B5000FE4748 /* UIImageView+HighAndLowImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F72E441FA17B5000FE4748 /* UIImageView+HighAndLowImageView.m */; };
+		04F72E461FA182BD00FE4748 /* OpenCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042664021FA075610009EF1E /* OpenCameraViewController.m */; };
+		04F72E471FA1862C00FE4748 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 042664281FA076F40009EF1E /* UIView+SDAutoLayout.m */; };
+		04F72E481FA1882D00FE4748 /* ALAsset+AGIPC.m in Sources */ = {isa = PBXBuildFile; fileRef = 042664111FA075610009EF1E /* ALAsset+AGIPC.m */; };
+		04F72E4A1FA1886200FE4748 /* UIButton+AGIPC.m in Sources */ = {isa = PBXBuildFile; fileRef = 042664191FA075610009EF1E /* UIButton+AGIPC.m */; };
+		04F72E4B1FA1889300FE4748 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 0426642B1FA076F40009EF1E /* UITableView+SDAutoTableViewCellHeight.m */; };
+		04F72E4C1FA18A0100FE4748 /* AGImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0426641F1FA075610009EF1E /* AGImagePickerController.bundle */; };
 		BD857C39A57F27995001A073 /* libPods-PhotoPickerManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B2F24FA3363156F6BB0FFC /* libPods-PhotoPickerManager.a */; };
 /* End PBXBuildFile section */
 
@@ -78,12 +85,10 @@
 		042663C31FA075610009EF1E /* MCFireworksView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCFireworksView.h; sourceTree = "<group>"; };
 		042663F91FA075610009EF1E /* AIPictureViewer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIPictureViewer.h; sourceTree = "<group>"; };
 		042663FA1FA075610009EF1E /* OpenCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCameraViewController.h; sourceTree = "<group>"; };
-		042663FB1FA075610009EF1E /* UIImageView+HighAndLowImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HighAndLowImageView.m"; sourceTree = "<group>"; };
 		042663FC1FA075610009EF1E /* AIPictureCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIPictureCollectionViewCell.m; sourceTree = "<group>"; };
 		042663FD1FA075610009EF1E /* cicleViewSelec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cicleViewSelec.png; sourceTree = "<group>"; };
 		042663FE1FA075610009EF1E /* AIPictureViewer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIPictureViewer.m; sourceTree = "<group>"; };
 		042663FF1FA075610009EF1E /* cicleViewSelec@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cicleViewSelec@3x.png"; sourceTree = "<group>"; };
-		042664001FA075610009EF1E /* UIImageView+HighAndLowImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HighAndLowImageView.h"; sourceTree = "<group>"; };
 		042664011FA075610009EF1E /* cicleView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cicleView.png; sourceTree = "<group>"; };
 		042664021FA075610009EF1E /* OpenCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenCameraViewController.m; sourceTree = "<group>"; };
 		042664031FA075610009EF1E /* cicleView@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cicleView@2x.png"; sourceTree = "<group>"; };
@@ -127,6 +132,9 @@
 		042664501FA084850009EF1E /* libpop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libpop.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		042664511FA088290009EF1E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		042664541FA08EAC0009EF1E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		04F72E421FA168D000FE4748 /* libpop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libpop.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		04F72E431FA17B5000FE4748 /* UIImageView+HighAndLowImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HighAndLowImageView.h"; sourceTree = "<group>"; };
+		04F72E441FA17B5000FE4748 /* UIImageView+HighAndLowImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HighAndLowImageView.m"; sourceTree = "<group>"; };
 		24B2F24FA3363156F6BB0FFC /* libPods-PhotoPickerManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotoPickerManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECFCB74EB9631CB85B740A2 /* Pods-PhotoPickerManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoPickerManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoPickerManager/Pods-PhotoPickerManager.debug.xcconfig"; sourceTree = "<group>"; };
 		C04756B1712A22CC748A7023 /* Pods-PhotoPickerManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoPickerManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoPickerManager/Pods-PhotoPickerManager.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,9 +145,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F72E411FA168D000FE4748 /* libpop.a in Frameworks */,
 				042664551FA08EAD0009EF1E /* QuartzCore.framework in Frameworks */,
 				042664521FA088290009EF1E /* CoreGraphics.framework in Frameworks */,
-				0426644F1FA084850009EF1E /* libpop.a in Frameworks */,
 				0426644E1FA079600009EF1E /* AssetsLibrary.framework in Frameworks */,
 				BD857C39A57F27995001A073 /* libPods-PhotoPickerManager.a in Frameworks */,
 			);
@@ -224,16 +232,16 @@
 		042663BD1FA075610009EF1E /* PhotoPicker */ = {
 			isa = PBXGroup;
 			children = (
-				042663BE1FA075610009EF1E /* AIPictureCollectionViewCell.xib */,
 				042663BF1FA075610009EF1E /* MCFireworksButton */,
 				042663F91FA075610009EF1E /* AIPictureViewer.h */,
 				042663FE1FA075610009EF1E /* AIPictureViewer.m */,
 				042663FA1FA075610009EF1E /* OpenCameraViewController.h */,
 				042664021FA075610009EF1E /* OpenCameraViewController.m */,
-				042664001FA075610009EF1E /* UIImageView+HighAndLowImageView.h */,
-				042663FB1FA075610009EF1E /* UIImageView+HighAndLowImageView.m */,
 				042664051FA075610009EF1E /* AIPictureCollectionViewCell.h */,
+				04F72E431FA17B5000FE4748 /* UIImageView+HighAndLowImageView.h */,
+				04F72E441FA17B5000FE4748 /* UIImageView+HighAndLowImageView.m */,
 				042663FC1FA075610009EF1E /* AIPictureCollectionViewCell.m */,
+				042663BE1FA075610009EF1E /* AIPictureCollectionViewCell.xib */,
 				042663FD1FA075610009EF1E /* cicleViewSelec.png */,
 				042663FF1FA075610009EF1E /* cicleViewSelec@3x.png */,
 				042664011FA075610009EF1E /* cicleView.png */,
@@ -293,11 +301,11 @@
 		042664271FA076F40009EF1E /* SDAutoLayout */ = {
 			isa = PBXGroup;
 			children = (
+				0426642A1FA076F40009EF1E /* SDAutoLayout.h */,
+				0426642C1FA076F40009EF1E /* UIView+SDAutoLayout.h */,
 				042664281FA076F40009EF1E /* UIView+SDAutoLayout.m */,
 				042664291FA076F40009EF1E /* UITableView+SDAutoTableViewCellHeight.h */,
-				0426642A1FA076F40009EF1E /* SDAutoLayout.h */,
 				0426642B1FA076F40009EF1E /* UITableView+SDAutoTableViewCellHeight.m */,
-				0426642C1FA076F40009EF1E /* UIView+SDAutoLayout.h */,
 			);
 			path = SDAutoLayout;
 			sourceTree = "<group>";
@@ -305,6 +313,7 @@
 		0426644C1FA079600009EF1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04F72E421FA168D000FE4748 /* libpop.a */,
 				042664541FA08EAC0009EF1E /* QuartzCore.framework */,
 				042664511FA088290009EF1E /* CoreGraphics.framework */,
 				042664501FA084850009EF1E /* libpop.a */,
@@ -432,6 +441,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F72E4C1FA18A0100FE4748 /* AGImagePickerController.bundle in Resources */,
 				042663981FA075410009EF1E /* LaunchScreen.storyboard in Resources */,
 				042663951FA075410009EF1E /* Assets.xcassets in Resources */,
 				042663931FA075410009EF1E /* Main.storyboard in Resources */,
@@ -513,6 +523,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F72E4B1FA1889300FE4748 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
+				04F72E4A1FA1886200FE4748 /* UIButton+AGIPC.m in Sources */,
+				04F72E481FA1882D00FE4748 /* ALAsset+AGIPC.m in Sources */,
+				04F72E471FA1862C00FE4748 /* UIView+SDAutoLayout.m in Sources */,
+				04F72E461FA182BD00FE4748 /* OpenCameraViewController.m in Sources */,
 				042664381FA078230009EF1E /* AGPreviewScrollView.m in Sources */,
 				042664371FA0781A0009EF1E /* AGImagePreviewController.m in Sources */,
 				042664361FA077FC0009EF1E /* AGIPCPreviewController.m in Sources */,
@@ -526,6 +541,7 @@
 				0426642E1FA077220009EF1E /* MCFireworksButton.m in Sources */,
 				0426642D1FA0770D0009EF1E /* AGImagePickerController.m in Sources */,
 				042664261FA076DA0009EF1E /* AIPictureCollectionViewCell.m in Sources */,
+				04F72E451FA17B5000FE4748 /* UIImageView+HighAndLowImageView.m in Sources */,
 				042664221FA076680009EF1E /* AIPictureViewer.m in Sources */,
 				042663901FA075410009EF1E /* ViewController.m in Sources */,
 				0426639B1FA075410009EF1E /* main.m in Sources */,
@@ -703,7 +719,7 @@
 				INFOPLIST_FILE = PhotoPickerManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"-ObjC",

@@ -1,8 +1,8 @@
 //
 //  UIImageView+HighAndLowImageView.h
-//  CSchool
+//  PhotoPickerManager
 //
-//  Created by mac on 2017/10/9.
+//  Created by mac on 2017/10/26.
 //  Copyright © 2017年 Joker. All rights reserved.
 //
 
@@ -10,6 +10,5 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 
 @interface UIImageView (HighAndLowImageView)
-@property (nonatomic,copy)ALAsset *soureData;
-
+@property (nonatomic,strong)ALAsset *sourceData;
 @end
