@@ -1,4 +1,4 @@
-//
+
 //  AIPictureViewer.m
 //  AIAnimationDemo
 //
@@ -418,8 +418,7 @@ static const CGFloat padding       = 4;
         UIImage *img = [UIImage imageWithCGImage:cimg];//aspectRatioThumbnail
         //转换为UIImage
         cell.imageV.image   = img;
-
-        cell.imageV.soureData = result;
+        cell.imageV.sourceData = result;
         ALAssetRepresentation *rep = [result defaultRepresentation];
         NSLog(@"%@",rep.filename);
         if ([result.description containsString:@"gif"]||[result.description containsString:@"GIF"]) {
@@ -484,7 +483,7 @@ static const CGFloat padding       = 4;
         
     }else{
         if (_clickNum>=3) {
-//            [JohnAlertManager showFailedAlert:@"最多选择3张图片" andTitle:@"提示"];
+//            [JohnAlertManager showFailedAlerxt:@"最多选择3张图片" andTitle:@"提示"];
             return;
         }
         _clickNum ++;

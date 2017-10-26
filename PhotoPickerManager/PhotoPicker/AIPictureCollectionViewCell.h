@@ -44,8 +44,5 @@
   重设选中状态
  */
 -(void)resetCircleView;
-///**
-// 判断选择框的选中状态
-// */
-//-(void)resetCircleViewSelected;
+
 @end

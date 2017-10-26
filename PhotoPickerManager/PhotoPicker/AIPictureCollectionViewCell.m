@@ -32,6 +32,56 @@ typedef enum :NSInteger {
 @implementation AIPictureCollectionViewCell
 
 #pragma mark --懒加载
+- (instancetype)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self createView];
+    }
+    return self;
+}
+-(void)createView
+{
+    self.imageV = ({
+        UIImageView  *view = [UIImageView new];
+        view.userInteractionEnabled    = YES;
+        view.layer.masksToBounds = YES;
+        view.clipsToBounds = YES;
+        view.contentMode = UIViewContentModeScaleAspectFill;
+        [view addGestureRecognizer:self.panGest];
+        view;
+    });
+    [self.panGest addTarget:self action:@selector(handGesture:)];
+    self.GIFIdeL=({
+        UILabel *view    = [UILabel new];
+        view.backgroundColor = RGB_Alpha(0, 0, 0, 0.5);
+        view.textColor = [UIColor whiteColor];
+        view.text = @"GIF";
+        view.textAlignment = NSTextAlignmentCenter;
+        view.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:9.0];
+        view;
+    });
+    self.cicleView =({
+        MCFireworksButton *view =  [[MCFireworksButton alloc]init];
+        view.clipsToBounds = YES;
+        view.layer.masksToBounds = YES;
+        view.frame = CGRectMake(self.bounds.size.width-21, 5, 15, 15);
+        view.layer.cornerRadius = 15/2;
+        view.titleLabel.font = [UIFont systemFontOfSize:11];
+        view.titleLabel.textAlignment = NSTextAlignmentCenter;
+        view.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.4];
+        [view addTarget:self action:@selector(sendImage:event:) forControlEvents:UIControlEventTouchUpInside];
+        view.selected= NO;
+        view;
+    });
+    self.imageV.frame = self.bounds;
+    [self.contentView addSubview:self.imageV];
+    [self.imageV addSubview:self.cicleView];
+    [self.imageV addSubview:self.GIFIdeL];
+    self.GIFIdeL.frame = CGRectMake(self.imageV.frame.size.width-25, self.imageV.size.height-15, 20, 10);
+}
+-(void)layoutSubviews{
+    self.imageV.frame = self.bounds;
+}
 -(UIPanGestureRecognizer *)panGest{
     if (!_panGest) {
         //添加手势
@@ -40,51 +90,7 @@ typedef enum :NSInteger {
     }
     return _panGest;
 }
-
--(UIImageView *)imageV{
-    if (!_imageV) {
-        _imageV                           = [[UIImageView alloc]init];
-        _imageV.userInteractionEnabled    = YES;
-        _imageV.layer.masksToBounds = YES;
-        _imageV.clipsToBounds = YES;
-        _imageV.contentMode = UIViewContentModeScaleAspectFill;
-    }
-    return _imageV;
-}
--(UILabel *)GIFIdeL
-{
-    if (!_GIFIdeL) {
-        _GIFIdeL = [[UILabel alloc]init];
-        _GIFIdeL.backgroundColor = RGB_Alpha(0, 0, 0, 0.5);
-        _GIFIdeL.textColor = [UIColor whiteColor];
-        _GIFIdeL.text = @"GIF";
-        _GIFIdeL.textAlignment = NSTextAlignmentCenter;
-        _GIFIdeL.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:9.0];
-    }
-    return _GIFIdeL;
-    
-}
-#pragma mark -- life
-- (instancetype)initWithFrame:(CGRect)frame{
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self.contentView  addSubview:self.imageV];
-        [self.imageV addGestureRecognizer:self.panGest];
-        [self.panGest addTarget:self action:@selector(handGesture:)];
-        [self addCicleView];
-        [self addGIFLabel];
-    }
-    return self;
-}
--(void)layoutSubviews{
-    self.imageV.frame = self.bounds;
-}
-//添加GIF标示
--(void)addGIFLabel
-{
-    [self.imageV addSubview:self.GIFIdeL];
-    self.GIFIdeL.sd_layout.rightSpaceToView(self.imageV, 0).bottomSpaceToView(self.imageV, 0).widthIs(20).heightIs(10);
-}
+//-set
 //添加圆圈
 -(void)addCicleView
 {
@@ -253,10 +259,10 @@ typedef enum :NSInteger {
     UIImageView *imageV = (UIImageView*)recognizer.view;
     __weak typeof(self) weakSelf = self;
     if (self.delegate && [self.delegate respondsToSelector:@selector(pictureCollection:didGestureSelectedImage:withOriginSoure:andImageWorldRect:)]) {
-        CGImageRef cHimg = [[imageV.soureData defaultRepresentation] fullResolutionImage];
+        CGImageRef cHimg = [[imageV.sourceData defaultRepresentation] fullResolutionImage];
         UIImage *hImg = [UIImage imageWithCGImage:cHimg];//aspectRatioThumbnail
 
-        [self.delegate pictureCollection:self didGestureSelectedImage:hImg withOriginSoure:imageV.soureData andImageWorldRect:recognizer.view.frame];
+        [self.delegate pictureCollection:self didGestureSelectedImage:hImg withOriginSoure:imageV.sourceData andImageWorldRect:recognizer.view.frame];
     }
     //设置动画初始frame
     imageV.frame  = CGRectMake(self.frame.size.width * 0.5, self.frame.size.height * 0.5, 0, 0);
